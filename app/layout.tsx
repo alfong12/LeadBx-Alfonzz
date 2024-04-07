@@ -1,7 +1,10 @@
 import '@mantine/core/styles.css';
+import '@mantine/carousel/styles.css';
 import React from 'react';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
+import { HeaderMenu } from '@/components/Layout/HeaderMenu';
+import { FooterSet } from '@/components/Layout/FooterSet';
 
 export const metadata = {
   title: 'Mantine Next.js template',
@@ -20,7 +23,11 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={theme}>
+          <HeaderMenu />
+          {children}
+          <FooterSet />
+        </MantineProvider>
       </body>
     </html>
   );

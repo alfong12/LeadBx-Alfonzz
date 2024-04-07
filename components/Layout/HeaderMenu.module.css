@@ -1,0 +1,45 @@
+.header {
+  height: rem(56px);
+  /* margin-bottom: rem(120px); */
+  background-color: var(--mantine-color-body);
+  border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  box-shadow: 0px, 4px, #0000000d;
+}
+
+.inner {
+  height: rem(56px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  display: block;
+  line-height: 1;
+  padding: rem(8px) rem(12px);
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  color: #333333;
+  font-size: 15px;
+  font-weight: 500;
+}
+.linkM {
+  display: block;
+  line-height: 1;
+  padding: rem(8px) rem(12px);
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+  font-size: 14px;
+  font-weight: 400;
+
+  @mixin hover {
+    text-decoration: underline;
+    font-weight: bold;
+    background-color: var(--mantine-color-body);
+  }
+}
+
+.linkLabel {
+  margin-right: rem(5px);
+}

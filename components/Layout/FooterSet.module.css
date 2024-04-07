@@ -1,0 +1,28 @@
+.footer {
+  margin-top: rem(120px);
+  padding-top: calc(var(--mantine-spacing-xl));
+  padding-bottom: calc(var(--mantine-spacing-xl));
+  background-color: #333333;
+}
+
+.wrapper {
+  /* max-width: rem(427.08px); */
+}
+
+.link {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+}
+.info {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.title {
+  font-size: var(--mantine-font-size-lg);
+  font-weight: 700;
+  font-family: Lato, var(--mantine-font-family);
+  color: #ffffff;
+}
