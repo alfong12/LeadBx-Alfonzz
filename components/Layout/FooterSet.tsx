@@ -19,6 +19,7 @@ import {
   IconBrandTwitterFilled,
   IconBrandYoutubeFilled,
 } from '@tabler/icons-react';
+import { useState } from 'react';
 import classes from './FooterSet.module.css';
 
 const data = [
@@ -81,7 +82,9 @@ const Icondat = [
   },
 ];
 
+//! Revisar las opsiones moviles para que este correcto(telefono)
 export function FooterSet() {
+  const [value, setValue] = useState<string | null>('');
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (
       <Text c="white" key={index} fz={14} fw={400}>
@@ -97,13 +100,14 @@ export function FooterSet() {
     );
   });
 
-  const horarios = dataD.map((hor) => (
-    <Text size="14p" c="white">
+  const horarios = dataD.map((hor, i) => (
+    <Text size="14p" c="white" key={i}>
       {hor.title}
     </Text>
   ));
-  const RRSS = Icondat.map((dat) => (
+  const RRSS = Icondat.map((dat, i) => (
     <ActionIcon
+      key={i}
       variant="outline"
       color="rgba(255, 255, 255, 1)"
       radius="xl"
@@ -135,7 +139,12 @@ export function FooterSet() {
             </Stack>
           </Grid.Col>
           <Grid.Col span="content">
-            <Select data={['SALES', 'SERVICE', 'PARTS']} placeholder="SALES" value="SALES" />
+            <Select
+              data={['SALES', 'SERVICE', 'PARTS']}
+              placeholder="SALES"
+              value={value}
+              onChange={setValue}
+            />
             <SimpleGrid cols={2} verticalSpacing="xs" spacing="xs">
               {horarios}
             </SimpleGrid>

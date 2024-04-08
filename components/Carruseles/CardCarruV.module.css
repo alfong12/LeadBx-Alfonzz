@@ -1,0 +1,64 @@
+.card {
+  width: 100%;
+  max-width: 400px; /* Ancho máximo de la tarjeta */
+  height: auto;
+  background-image: url('/images/image10.png');
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.card_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #f2f2f2dc;
+  padding: 15px;
+}
+
+.card_title {
+  color: #333333;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.card_overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 164px;
+  height: 47.49px;
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_overlay_text {
+  color: white;
+  font-size: 20px;
+  font-weight: 800px;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Media query para tabletas y teléfonos */
+@media (max-width: 992px) {
+  .card {
+    margin-top: 52px;
+    max-width: 400px; /* Ancho máximo para tabletas */
+  }
+}
+
+/* Media query para teléfonos */
+@media (max-width: 576px) {
+  .card {
+    margin-top: 32px;
+    max-width: 256.17px; /* Ancho máximo para teléfonos */
+    height: 256.17px; /* Altura para teléfonos */
+  }
+}

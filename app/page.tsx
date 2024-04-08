@@ -1,9 +1,13 @@
-import { Text } from '@mantine/core';
+import CarruselHero from '@/components/Carruseles/CarruselHero';
+import FeaturesVehicules from '@/components/Carruseles/FeaturesVehicules';
+import FeatureSec from '@/components/features/FeatureSec';
 
 export default function HomePage() {
   return (
     <>
-      <Text>Page</Text>
+      <CarruselHero />
+      <FeaturesVehicules />
+      <FeatureSec />
     </>
   );
 }

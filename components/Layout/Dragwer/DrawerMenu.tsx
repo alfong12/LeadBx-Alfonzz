@@ -26,7 +26,7 @@ const DrawerMenu = ({
 }) => {
   const Nlinks = items.map((item) => {
     const menuItems = item.links?.map((Slink) => (
-      <Accordion.Panel>
+      <Accordion.Panel key={Slink.label}>
         <a
           key={Slink.label}
           href={Slink.link}
@@ -40,7 +40,7 @@ const DrawerMenu = ({
 
     if (menuItems) {
       return (
-        <Accordion defaultValue="">
+        <Accordion defaultValue="" key={item.label}>
           <Accordion.Item key={item.label} value={item.label}>
             <Accordion.Control>{item.label}</Accordion.Control>
             {menuItems}
