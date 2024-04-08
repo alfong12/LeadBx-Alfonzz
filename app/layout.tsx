@@ -7,8 +7,8 @@ import { HeaderMenu } from '@/components/Layout/HeaderMenu';
 import { FooterSet } from '@/components/Layout/FooterSet';
 
 export const metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'Prueba Tecnica Leadbox',
+  description: 'Prueba Tecnica de Alfonzo Fong',
 };
 
 export default function RootLayout({ children }: { children: any }) {

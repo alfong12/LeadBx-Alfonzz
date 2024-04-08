@@ -1,6 +1,16 @@
 'use client';
 
-import { Text, Grid, SimpleGrid, Stack, Image, Select, ActionIcon, Group } from '@mantine/core';
+import {
+  Text,
+  Grid,
+  SimpleGrid,
+  Stack,
+  Image,
+  Select,
+  ActionIcon,
+  Group,
+  Center,
+} from '@mantine/core';
 import {
   IconBrandFacebookFilled,
   IconBrandInstagram,
@@ -146,7 +156,9 @@ export function FooterSet() {
         <Grid.Col span={{ base: 12, md: 5, lg: 5 }} order={{ base: 3, md: 2, lg: 2 }}>
           <Stack align="center" gap="sm">
             {matches && <Image src="/images/LeadboxLw.png" h={28} w={148.32} />}
-            <Group mt={30}>{RRSS}</Group>
+            <Group mt={30} mb={20}>
+              {RRSS}
+            </Group>
             <span className={classes.info}>
               Sitemap | Terms and Conditions | Privacy Policy | Dealership © 2022 | Powered by
               Leadbox

@@ -5,29 +5,11 @@
 }
 
 .image_container {
-  position: relative;
-}
-
-.image_container img {
-  width: 100%;
-  display: block;
-  border-bottom: 5px solid white;
-}
-
-.triangle {
-  position: absolute;
-  bottom: -10px; /* Mueve el triángulo 10px hacia abajo para que se superponga sobre el card_content */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid rgba(221, 29, 29, 0.7); /* Fondo del triángulo transparente */
+  clip-path: polygon(100% 0, 100% 95%, 13% 95%, 8% 100%, 3% 95%, 0 95%, 0 0);
 }
 
 .card_content {
-  padding: 20px;
+  padding: 0px;
   background-color: white;
   margin-top: -5px; /* Mueve el card_content 5px hacia arriba para superponer la imagen */
 }

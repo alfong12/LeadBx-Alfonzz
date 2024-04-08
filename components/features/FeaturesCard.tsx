@@ -10,7 +10,12 @@ export interface IdarC {
 const FeaturesCard = ({ darC }: { darC: IdarC }) => (
   <div className={classes.card}>
     <div className={classes.image_container}>
-      <Image src={darC.lin} alt="Imagen"></Image>
+      <Image
+        src={darC.lin}
+        alt="Imagen"
+        fallbackSrc="https://placehold.co/600x400?text=Placeholder"
+        className=""
+      />
     </div>
     <div className={classes.card_content}>
       <h2 className={classes.card_title}>{darC.titulo}</h2>
