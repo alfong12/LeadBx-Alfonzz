@@ -68,7 +68,7 @@ const DrawerMenu = ({
       size="50%"
       padding="md"
       title="Navigation"
-      hiddenFrom="sm"
+      hiddenFrom="md"
       zIndex={1000000}
     >
       <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">

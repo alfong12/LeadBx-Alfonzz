@@ -99,11 +99,16 @@ export function HeaderMenu() {
         <Container size="xl">
           <div className={classes.inner}>
             <Image src="/images/LeadboxLogo.png" h={28} w={148.32} />
-            <Group gap={50} visibleFrom="sm" justify="space-between">
+            <Group gap={50} visibleFrom="md" justify="space-between">
               {items}
               <IconSearch size={32} strokeWidth={2} color="black" />
             </Group>
-            <Burger opened={drawerOpened} onClick={toggleDrawer} size="sm" hiddenFrom="sm" />
+            <Group hiddenFrom="md">
+              <span>
+                <IconSearch size={32} strokeWidth={2} color="black" />
+              </span>
+              <Burger opened={drawerOpened} onClick={toggleDrawer} size="sm" hiddenFrom="md" />
+            </Group>
           </div>
         </Container>
       </header>
