@@ -57,7 +57,6 @@ const FeaturesVehicules = () => {
         </Title>
       </Center>
       <Carousel
-        withIndicators
         loop
         slideSize={{ base: '100%', sm: '50%', md: '33.333333%' }}
         slideGap={{ base: 0, sm: 'md' }}
