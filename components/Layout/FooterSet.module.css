@@ -3,10 +3,15 @@
   padding-top: calc(var(--mantine-spacing-xl));
   padding-bottom: calc(var(--mantine-spacing-xl));
   background-color: #333333;
-}
 
-.wrapper {
-  /* max-width: rem(427.08px); */
+  @media (max-width: $mantine-breakpoint-xs) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+  }
 }
 
 .link {

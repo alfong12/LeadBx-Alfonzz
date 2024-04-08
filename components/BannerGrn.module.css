@@ -40,6 +40,8 @@
   @media (max-width: $mantine-breakpoint-md) {
     margin-top: 12px;
     align-self: center;
+    right: 0;
+    left: 0;
   }
 }
 

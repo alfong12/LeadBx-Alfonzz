@@ -30,7 +30,7 @@ const FeatureSec = () => {
     },
   ];
 
-  const cardF = darC?.map((d) => <FeaturesCard darC={d} />);
+  const cardF = darC?.map((d) => <FeaturesCard darC={d} key={d.lin} />);
   return (
     <Container size="xl">
       <SimpleGrid
