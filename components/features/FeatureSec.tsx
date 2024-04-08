@@ -34,7 +34,7 @@ const FeatureSec = () => {
   return (
     <Container size="xl">
       <SimpleGrid
-        cols={{ base: 1, sm: 2, lg: 3 }}
+        cols={{ base: 1, sm: 3, lg: 3 }}
         spacing={{ base: 10, sm: 'sm' }}
         my={16}
         verticalSpacing={{ base: 'md', sm: 'xl' }}

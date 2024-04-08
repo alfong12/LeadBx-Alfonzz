@@ -4,7 +4,7 @@
   padding-bottom: calc(var(--mantine-spacing-xl));
   background-color: #333333;
 
-  @media (max-width: $mantine-breakpoint-xs) {
+  @media (max-width: $mantine-breakpoint-md) {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -30,4 +30,12 @@
   font-weight: 700;
   font-family: Lato, var(--mantine-font-family);
   color: #ffffff;
+  @media (max-width: $mantine-breakpoint-md) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+  }
 }

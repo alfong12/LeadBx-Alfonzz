@@ -83,14 +83,28 @@ const Icondat = [
 export function FooterSet() {
   const [value, setValue] = useState<string | null>('SALES');
 
-  const matches = useMediaQuery('(min-width: 37.5em)');
+  const matches = useMediaQuery('(min-width: 48.5em)');
 
   const contatc = data.map((group) => {
     const links = group.links.map((link, index) => (
-      <Text c="white" key={index} fz={14} fw={400} mt={15}>
+      <Text c="white" key={index} fz={14} fw={400} mt={15} ta={!matches ? 'center' : 'inherit'}>
         {link.label}
       </Text>
     ));
+
+    if (!matches) {
+      return (
+        <div key={group.title} className={classes.title}>
+          <Stack align="center">
+            <Image src="/images/LeadboxLw.png" h={28} w={148.32} mb={30} />
+            <Text c="white" ta="center">
+              {group.title}
+            </Text>
+            {links}
+          </Stack>
+        </div>
+      );
+    }
 
     return (
       <div key={group.title}>
@@ -125,13 +139,11 @@ export function FooterSet() {
 
   return (
     <footer className={classes.footer}>
-      <Grid justify="center" align="start">
-        <Grid.Col span={{ base: 12, md: 4, lg: 3 }} order={{ base: 1, md: 1, lg: 1 }}>
-          {!matches && <Image src="/images/LeadboxLw.png" h={28} w={148.32} mb={30} />}
-
+      <Grid justify="center" align="center">
+        <Grid.Col span={{ base: 12, md: 3, lg: 3 }} order={{ base: 1, md: 1, lg: 1 }}>
           {contatc}
         </Grid.Col>
-        <Grid.Col span={{ base: 12, md: 4, lg: 5 }} order={{ base: 3, md: 2, lg: 2 }}>
+        <Grid.Col span={{ base: 12, md: 5, lg: 5 }} order={{ base: 3, md: 2, lg: 2 }}>
           <Stack align="center" gap="sm">
             {matches && <Image src="/images/LeadboxLw.png" h={28} w={148.32} />}
             <Group mt={30}>{RRSS}</Group>
@@ -141,7 +153,7 @@ export function FooterSet() {
             </span>
           </Stack>
         </Grid.Col>
-        <Grid.Col span={{ base: 12, md: 4, lg: 3 }} order={{ base: 2, md: 3, lg: 3 }}>
+        <Grid.Col span={{ base: 12, md: 3, lg: 3 }} order={{ base: 2, md: 3, lg: 3 }}>
           <Select
             data={['SALES', 'SERVICE', 'PARTS']}
             placeholder="SALES"

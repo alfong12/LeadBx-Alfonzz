@@ -25,9 +25,7 @@ const CarruselHero = () => {
 
   return (
     <Container mah="673px" maw="1920px" p={0} m={0}>
-      <Carousel withIndicators loop>
-        {slidCar}
-      </Carousel>
+      <Carousel loop>{slidCar}</Carousel>
     </Container>
   );
 };

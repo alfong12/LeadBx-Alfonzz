@@ -7,14 +7,14 @@ export function BannerGrn() {
       <Overlay color="#219653" opacity={0.7} zIndex={1} />
       <div className={classes.flex}>
         <div className={classes.innerImg}>
-          <Image src="/images/image66.png" mah={317} maw={700} />
+          <Image src="/images/image66.png" mah={344} maw={800} />
         </div>
         <div className={classes.inner}>
           <Title fw={700} className={classes.title}>
             ABOUT US
           </Title>
 
-          <Container size={640}>
+          <Container maw={640}>
             <Text fz={14} className={classes.description}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel quam nec metus
               pellentesque iaculis. Cras lobortis odio a nulla condimentum blandit. Donec laoreet
