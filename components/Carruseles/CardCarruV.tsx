@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@mantine/core';
-import classes from './CArdCArruV.module.css';
+import classes from './CardCarruV.module.css';
 
 const CardCarruV = ({ dataC }: any) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
